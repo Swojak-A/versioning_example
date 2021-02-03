@@ -45,7 +45,10 @@ ROOT_URLCONF = "app.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [os.path.join(BASE_DIR, "templates")],
+        "DIRS": [
+            os.path.join(BASE_DIR, "templates"),
+            os.path.join(BASE_DIR, "modules", "core", "admin", "templates"),
+        ],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -53,6 +56,7 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+                "modules.core.context_processors.base.project_version",
             ]
         },
     }
@@ -128,3 +132,7 @@ LOGGING = {
 
 STATIC_URL = "/s/"
 STATIC_ROOT = os.path.join(BASE_DIR, "../static")
+
+# Versioning
+
+VERSION = "Version not set"
