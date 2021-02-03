@@ -128,21 +128,3 @@ LOGGING = {
 
 STATIC_URL = "/s/"
 STATIC_ROOT = os.path.join(BASE_DIR, "../static")
-
-# Django Rest Framework
-
-REST_FRAMEWORK = {
-    "DEFAULT_AUTHENTICATION_CLASSES": (
-        "rest_framework.authentication.SessionAuthentication",
-        "rest_framework.authentication.BasicAuthentication",
-    ),
-    "DEFAULT_RENDERER_CLASSES": ("rest_framework.renderers.JSONRenderer",),
-    "DEFAULT_PARSER_CLASSES": ("rest_framework.parsers.JSONParser",),
-    "DEFAULT_VERSIONING_CLASS": "rest_framework.versioning.AcceptHeaderVersioning",
-    "ORDERING_PARAM": "sort",
-    "DEFAULT_VERSION": "v1",
-    "ALLOWED_VERSIONS": ["v1"],
-    "TEST_REQUEST_DEFAULT_FORMAT": "json",
-    "EXCEPTION_HANDLER": "modules.core.drf.handlers.exception_handler",
-    "DATETIME_FORMAT": "%Y-%m-%dT%H:%M:%S.%fZ",
-}
