@@ -2,6 +2,17 @@
 
 Autocrated changelog using generate-changelog script and auto-changelog package.
 
+## v0.4.0 (2021-02-03)
+
+#### New Features
+
+* add LocalGovernmentInline
+#### Others
+
+* update CHANGELOG.md
+
+Full set of changes: [`v0.3.0...v0.4.0`](https://github.com/Swojak-A/versioning_example/compare/v0.3.0...v0.4.0)
+
 ## v0.3.0 (2021-02-03)
 
 #### New Features
