@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # custom apps
     "modules.regions",
+    "modules.authorities",
 ]
 
 MIDDLEWARE = [
