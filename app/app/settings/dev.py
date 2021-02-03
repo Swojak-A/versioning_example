@@ -16,3 +16,5 @@ INSTALLED_APPS += ["modules.core"]
 DATABASES = {
     "default": dj_database_url.config(default=os.environ["DJANGO_DATABASE_URL"])
 }
+
+VERSION = os.environ.get("VERSION", "Version not set")
