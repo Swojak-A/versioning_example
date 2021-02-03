@@ -1,5 +1,6 @@
 from django.contrib import admin
 
+from modules.authorities.admin import LocalGovernmentInline
 from .models import Region
 
 
@@ -9,3 +10,4 @@ class RegionAdmin(admin.ModelAdmin):
     readonly_fields = ("id", "created_at", "updated_at")
     list_display = ("id", "name", "population")
     list_display_links = ("id", "name")
+    inlines = [LocalGovernmentInline]
